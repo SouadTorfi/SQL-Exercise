@@ -84,3 +84,28 @@ WHERE Name = 'Layal'"
 
 
 
+
+
+#Count & Filter
+
+#problem1:Find the person with the highest number of points in students
+"SELECT name FROM students
+ WHERE Points=(SELECT max(Points) FROM students)"
+
+#problem2:Find the average of points in students
+"SELECT AVG(Points)
+ FROM students"
+
+#problem3:Find the number of students that have 500 points
+"SELECT COUNT(Points)
+ FROM students
+ WHERE Points = 500"
+
+#problem4:Find the names of students that contains 's'
+"SELECT name FROM students
+ WHERE name LIKE '%s%'"
+
+#problem5:Find all students based on the decreasing order of their points
+"SELECT Name FROM students
+ ORDER BY Points DESC"
+
